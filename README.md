@@ -10,9 +10,12 @@ This Plug-In allows a user to move users of a channel to the target channel.
 - New Icons (as you see above)
 - Channel Password compatibility (thanks to Dave from BBQCamp.de for the base-function and the idea)
 
-#### Features
-Language: This Plug-In is localized in German currently.
+#### Language and Localization
+This Plug-In is localized in German currently.
 I will add multilanguage support when I find time and also a detection-method to know what language a certain user has set in his TS³ settings.
+
+#### Download
+[Latest release](https://github.com/SINE/VeganMassMove/releases/latest)
 
 #### License, Copyright and Copyleft
 All content of this repository is licensed under [the GNU/GPL 3.0 license](https://raw.githubusercontent.com/SINE/VeganMassMove/master/LICENSE.txt)
