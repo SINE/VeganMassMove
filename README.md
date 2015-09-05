@@ -17,4 +17,5 @@ Language: This Plug-In is localized in German currently.
 I will add multilanguage support when I find time and also a detection-method to know what language a certain user has set in his TS³ settings.
 
 #### License
-All content of this repository is licensed under the GNU/GPL 3.0 license
+All content of this repository is licensed under [the GNU/GPL 3.0 license](https://raw.githubusercontent.com/SINE/VeganMassMove/master/LICENSE.txt)
+
