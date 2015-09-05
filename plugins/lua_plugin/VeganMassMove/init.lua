@@ -1,6 +1,10 @@
 --
--- Author: FH3095
+--	Author: 							SINE		(	github.com/SINE	)	
+--	Credits: 
+--											FH3095	(	github.com/FH3095	)	 for creating the base of this wonderful script and providing a fix for TS version 3.0.17
+--											Dave												 	 for doing his first fix for the ChannelPassword problem (LUA cant read the TS Password Storage)
 --
+
 
 require("ts3init")
 require("ts3defs")
@@ -24,10 +28,10 @@ end
 
 local channelMover = {
 	const = {
-		MODULE_NAME = "Simple Mass Move",
-		MODULE_FOLDER = "SimpleMassMove",
+		MODULE_NAME = "VeganMassMove",
+		MODULE_FOLDER = "VeganMassMove",
 		DEBUG = 0,
-		DEBUG_MSG_IN_CHAT = 1,
+		DEBUG_MSG_IN_CHAT = 0,
 	},
 	var = {},
 }
@@ -38,12 +42,19 @@ function FH3095_getChannelMover()
 	return channelMover
 end
 
-require(channelMover.const.MODULE_FOLDER .. "/SimpleMassMove")
+require(channelMover.const.MODULE_FOLDER .. "/SMM")
+
 
 
 local registeredEvents = {
 	createMenus = channelMover.onCreateMenus,
 	onMenuItemEvent = channelMover.onMenuItemEvent,
+	onTextMessageEvent = channelMover.onTextMessageEvent,
+	onServerErrorEvent = channelMover.onServerErrorEvent,
+	onServerPermissionErrorEvent = channelMover.onServerPermissionErrorEvent,
+	onChannelMoveEvent = channelMover.onChannelMoveEvent,
+	onClientMoveEvent = channelMover.onClientMoveEvent,
+	onClientMoveMovedEvent = channelMover.onClientMoveMovedEvent,
 }
 
 ts3RegisterModule(channelMover.const.MODULE_NAME, registeredEvents)
